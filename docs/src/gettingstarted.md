@@ -152,7 +152,7 @@ julia> collect(chunks(y; n=3))
 
 ## Splitting strategy
 
-Both `index_chunks` and `chunks` take an optional keyword argument `split` that you can use to determine how the input collection is split into chunks. We support to strategies: `Consecutive()` (default) and `RoundRobin()`.
+Both `index_chunks` and `chunks` take an optional keyword argument `split` that you can use to determine how the input collection is split into chunks. We support two strategies: `Consecutive()` (default) and `RoundRobin()`.
 
 With `Consecutive()`, chunks are "filled up" with indices/elements one after another. They will consist of **consecutive** indices/elements will hold approximately the same number of indices/elements (as far as possible). Note that this is unlike `Iterators.partition`.
 
